@@ -1,0 +1,27 @@
+@host = http://localhost:5801
+@streamId = 1qerW2w1
+@eventId = 1event1
+
+### Check Health
+GET {{host}}/ HTTP/1.1
+
+### Post to stream
+PUT {{host}}/stream HTTP/1.1
+Content-Type: application/json
+
+{
+   "id": "some id",
+   "args": "some args"
+}
+
+### Post all from stream
+GET {{host}}/stream/{{streamId}} HTTP/1.1
+
+### Get all from stream starting at 1
+GET {{host}}/stream/{{streamId}}/1 HTTP/1.1
+
+### Get 5 events from stream starting at 1
+GET {{host}}/stream/{{streamId}}/1/5 HTTP/1.1
+
+### Get event by id
+GET {{host}}/event/{{eventId}} HTTP/1.1
