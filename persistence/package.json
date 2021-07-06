@@ -2,12 +2,13 @@
   "name": "mainer",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "pack": "babel src --out-file dist/app.js",
     "build": "babel src -d dist -s",
-    "app": "npm run build && node --harmony-weak-refs dist/app.js"
+    "app": "npm run build && node dist/app.js",
+    "dev": "npx nodemon -L --exec npx babel-node -- ./src/app.mjs"
   },
   "author": "Przemysław Sowiński",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "@babel/core": "^7.13.15",
     "@babel/eslint-parser": "^7.13.14",
     "@babel/eslint-plugin": "^7.13.15",
+    "@babel/node": "^7.14.7",
     "@babel/plugin-proposal-do-expressions": "^7.12.13",
     "@babel/plugin-proposal-partial-application": "^7.12.13",
     "@babel/plugin-proposal-pipeline-operator": "^7.12.13",
@@ -23,7 +25,8 @@
     "@babel/preset-env": "^7.13.15",
     "eslint": "^7.24.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.9"
   },
   "dependencies": {
     "@bloomberg/record-tuple-polyfill": "^0.0.3",
