@@ -8,7 +8,7 @@
     "pack": "babel src --out-file dist/app.js",
     "build": "babel src -d dist -s",
     "app": "npm run build && node dist/app.js",
-    "dev": "npx nodemon -L --exec npx babel-node -- ./src/app.mjs"
+    "dev": "npx nodemon --exec npx babel-node -- ./src/app.mjs"
   },
   "author": "Przemysław Sowiński",
   "license": "MIT",
