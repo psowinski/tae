@@ -1,9 +1,11 @@
 import express from 'express';
+import { store } from './db.mjs'
 
 const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
+  store();
   res.send('Tae Persistence 1.0.0');
 });
 

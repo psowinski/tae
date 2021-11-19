@@ -1,17 +1,13 @@
 {
-    "presets": ["@babel/preset-env"],
-    "plugins": [
-        ["@babel/plugin-proposal-pipeline-operator", { "proposal": "fsharp" }],
-        "@babel/plugin-proposal-partial-application",
-        "@babel/plugin-proposal-do-expressions",
-        ["@babel/plugin-proposal-record-and-tuple", {
-            "syntaxType": "hash",
-            "importPolyfill": true
-        }]
-    ],
-    "targets": {
-        "node": "current",
-        "esmodules": true
-    },
-    "sourceMaps": true
+    "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "browsers": "last 2 versions"
+            },
+            "modules": false
+          }
+        ]
+    ]
 }

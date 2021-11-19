@@ -1,4 +1,6 @@
-@host = http://localhost:5801
+#@host = http://localhost:5801
+#@host = http://172.26.80.1:5801
+@host = http://172.26.82.177:5801
 @streamId = 1qerW2w1
 @eventId = 1event1
 
